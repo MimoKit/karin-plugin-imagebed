@@ -26,6 +26,7 @@ Karin ImageBed 将多个图床统一成一个上传服务：按优先级尝试�
 | 自动回退 | 按 `priority` 顺序尝试启用的 provider，单个失败不会阻断整条链 |
 | QQ Markdown | QQ 官方机器人优先发送 Markdown 图片，其他适配器自动降级为图片段或文本 |
 | 轻量配置 | 首次运行自动生成 JSON 配置，不把 token 写进代码或仓库 |
+| 可选 provider | 当前迁移 CNB、PicGo、Cli.im、库街区与 B 站，需凭据的 provider 默认关闭 |
 | 可扩展 provider | 每个图床只需实现统一的 `upload(buffer, name, options)` 接口 |
 
 ## 快速开始
@@ -59,7 +60,9 @@ pnpm install
   "providers": {
     "cliim": { "enabled": true },
     "picgo": { "enabled": false, "apiKey": "" },
-    "cnb": { "enabled": false, "token": "", "repo": "" }
+    "cnb": { "enabled": false, "token": "", "repo": "" },
+    "kurobbs": { "enabled": false, "token": "" },
+    "bilibili": { "enabled": false, "csrfToken": "", "sessdata": "", "bucket": "openplatform" }
   }
 }
 ```

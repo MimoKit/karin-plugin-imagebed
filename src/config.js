@@ -13,6 +13,8 @@ const DEFAULT_CONFIG = {
     cnb: { enabled: false, token: '', repo: '' },
     picgo: { enabled: false, apiKey: '' },
     cliim: { enabled: true },
+    kurobbs: { enabled: false, token: '' },
+    bilibili: { enabled: false, csrfToken: '', sessdata: '', bucket: 'openplatform' },
   },
 }
 
