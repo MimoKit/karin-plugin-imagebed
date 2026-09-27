@@ -6,10 +6,31 @@
   "main": "src/index.js",
   "license": "MIT",
   "author": "MimoKit",
-  "repository": {"type": "git", "url": "https://github.com/MimoKit/karin-plugin-imagebed.git"},
-  "keywords": ["karin", "karin-plugin", "imagebed", "qqbot", "markdown"],
-  "engines": {"node": ">=18"},
-  "karin": {"main": "src/index.js", "apps": "src/apps", "web": "./web.config.js", "engines": ">=1.16.0"},
-  "scripts": {"test": "node --test test/**/*.test.mjs"},
-  "dependencies": {"file-type": "^22.0.1", "node-karin": "^1.16.0"}
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MimoKit/karin-plugin-imagebed.git"
+  },
+  "keywords": [
+    "karin",
+    "karin-plugin",
+    "imagebed",
+    "qqbot",
+    "markdown"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "karin": {
+    "main": "src/index.js",
+    "apps": "src/apps",
+    "web": "dist/web.config.js",
+    "ts-web": "web.config.js"
+  },
+  "scripts": {
+    "test": "node --test test/**/*.test.mjs"
+  },
+  "dependencies": {
+    "file-type": "^22.0.1",
+    "node-karin": "^1.16.0"
+  }
 }
