@@ -4,6 +4,7 @@ export function formatDuration(ms = 0) {
 
 import { createProviders } from './providers/index.js'
 import { loadConfig } from './config.js'
+import { recordUpload } from './stats.js'
 
 export function createImageBedService(config = loadConfig()) {
   const service = {
@@ -20,9 +21,14 @@ export function createImageBedService(config = loadConfig()) {
       for (const provider of candidates) {
         const started = Date.now()
         try {
-          return { url: await provider.upload(buffer, name, options), provider: provider.configKey, cost: Date.now() - started }
+          const url = await provider.upload(buffer, name, options)
+          const cost = Date.now() - started
+          recordUpload({ provider: provider.configKey, success: true, cost, size: buffer.length })
+          return { url, provider: provider.configKey, cost }
         } catch (error) {
-          errors.push(`${provider.name}: ${error instanceof Error ? error.message : String(error)}`)
+          const message = error instanceof Error ? error.message : String(error)
+          recordUpload({ provider: provider.configKey, success: false, cost: Date.now() - started, size: buffer.length, error: message })
+          errors.push(`${provider.name}: ${message}`)
         }
       }
       throw new Error(`所有图床均失败（${errors.join('；')}）`)
