@@ -1,0 +1,15 @@
+{
+  "name": "karin-plugin-imagebed",
+  "version": "0.1.0",
+  "description": "Karin Bot 图床服务：多图床优先级、自动故障回退与 QQ 官方 Markdown 图片输出",
+  "type": "module",
+  "main": "src/index.js",
+  "license": "MIT",
+  "author": "MimoKit",
+  "repository": {"type": "git", "url": "https://github.com/MimoKit/karin-plugin-imagebed.git"},
+  "keywords": ["karin", "karin-plugin", "imagebed", "qqbot", "markdown"],
+  "engines": {"node": ">=18"},
+  "karin": {"apps": "src/apps", "engines": ">=1.16.0"},
+  "scripts": {"test": "node --test test/**/*.test.mjs"},
+  "dependencies": {"file-type": "^22.0.1", "node-karin": "^1.16.0"}
+}

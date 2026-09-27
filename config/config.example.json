@@ -1,0 +1,10 @@
+{
+  "priority": ["cnb", "picgo", "cliim"],
+  "stats": {"enabled": true, "maxDays": 30},
+  "markdown": {"enabled": true, "maxImageWidth": 720, "fallbackText": true},
+  "providers": {
+    "cnb": {"enabled": false, "token": "", "repo": ""},
+    "picgo": {"enabled": false, "apiKey": ""},
+    "cliim": {"enabled": true}
+  }
+}
