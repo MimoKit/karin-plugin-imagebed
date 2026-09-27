@@ -9,7 +9,7 @@
   "repository": {"type": "git", "url": "https://github.com/MimoKit/karin-plugin-imagebed.git"},
   "keywords": ["karin", "karin-plugin", "imagebed", "qqbot", "markdown"],
   "engines": {"node": ">=18"},
-  "karin": {"apps": "src/apps", "engines": ">=1.16.0"},
+  "karin": {"main": "src/index.js", "apps": "src/apps", "web": "./web.config.js", "engines": ">=1.16.0"},
   "scripts": {"test": "node --test test/**/*.test.mjs"},
   "dependencies": {"file-type": "^22.0.1", "node-karin": "^1.16.0"}
 }

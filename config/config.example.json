@@ -1,12 +1,42 @@
 {
-  "priority": ["cnb", "picgo", "cliim"],
-  "stats": {"enabled": true, "maxDays": 30},
-  "markdown": {"enabled": true, "maxImageWidth": 720, "fallbackText": true},
+  "priority": [
+    "cnb",
+    "picgo",
+    "cliim",
+    "kurobbs",
+    "bilibili"
+  ],
+  "stats": {
+    "enabled": true,
+    "maxDays": 30
+  },
+  "markdown": {
+    "enabled": true,
+    "maxImageWidth": 720,
+    "fallbackText": true
+  },
   "providers": {
-    "cnb": {"enabled": false, "token": "", "repo": ""},
-    "picgo": {"enabled": false, "apiKey": ""},
-    "cliim": {"enabled": true},
-    "kurobbs": {"enabled": false, "token": ""},
-    "bilibili": {"enabled": false, "csrfToken": "", "sessdata": "", "bucket": "openplatform"}
+    "cnb": {
+      "enabled": false,
+      "token": "",
+      "repo": ""
+    },
+    "picgo": {
+      "enabled": false,
+      "apiKey": ""
+    },
+    "cliim": {
+      "enabled": true
+    },
+    "kurobbs": {
+      "enabled": false,
+      "token": ""
+    },
+    "bilibili": {
+      "enabled": false,
+      "csrfToken": "",
+      "sessdata": "",
+      "bucket": "openplatform"
+    }
   }
 }
