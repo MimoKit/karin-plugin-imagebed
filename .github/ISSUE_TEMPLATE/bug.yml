@@ -1,0 +1,40 @@
+name: 问题反馈
+
+description: 请提供 Karin、适配器、指令、日志和实际现象。
+title: "[问题] "
+labels:
+  - needs-triage
+body:
+  - type: textarea
+    id: environment
+    attributes:
+      label: 环境
+      placeholder: |
+        Node.js 22 / Karin 1.16.x / @karinjs/adapter-qqbot 3.3.x
+    validations:
+      required: true
+  - type: textarea
+    id: scenario
+    attributes:
+      label: 场景
+      placeholder: |
+        群聊发送 #图床，附带一张图片，每次失败
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: 完整日志
+      description: 请粘贴完整错误堆栈，不要只截最后一行。
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: 预期与实际
+      placeholder: |
+        预期：返回 Markdown 图片
+        实际：返回错误 / 没有反应
+    validations:
+      required: true

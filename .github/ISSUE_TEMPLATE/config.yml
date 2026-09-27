@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Karin 文档
+    url: https://karinjs.com/guide/plugins/
+    about: 先确认 Karin 插件环境与适配器版本。
