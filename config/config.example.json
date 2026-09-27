@@ -1,5 +1,6 @@
 {
   "priority": [
+    "chatglm",
     "cnb",
     "picgo",
     "cliim",
@@ -26,7 +27,7 @@
       "apiKey": ""
     },
     "cliim": {
-      "enabled": true
+      "enabled": false
     },
     "kurobbs": {
       "enabled": false,
@@ -37,6 +38,9 @@
       "csrfToken": "",
       "sessdata": "",
       "bucket": "openplatform"
+    },
+    "chatglm": {
+      "enabled": true
     }
   }
 }

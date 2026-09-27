@@ -6,16 +6,17 @@ export const PLUGIN_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.u
 export const CONFIG_PATH = path.join(PLUGIN_ROOT, 'config', 'config.json')
 
 /** 全部 provider 键，供配置页与优先级校验复用。 */
-export const PROVIDER_KEYS = ['cnb', 'picgo', 'cliim', 'kurobbs', 'bilibili']
+export const PROVIDER_KEYS = ['cnb', 'picgo', 'chatglm', 'cliim', 'kurobbs', 'bilibili']
 
 const DEFAULT_CONFIG = {
-  priority: ['cnb', 'picgo', 'cliim', 'kurobbs', 'bilibili'],
+  priority: ['chatglm', 'cnb', 'picgo', 'cliim', 'kurobbs', 'bilibili'],
   stats: { enabled: true, maxDays: 30 },
   markdown: { enabled: true, maxImageWidth: 720, fallbackText: true },
   providers: {
     cnb: { enabled: false, token: '', repo: '' },
     picgo: { enabled: false, apiKey: '' },
-    cliim: { enabled: true },
+    chatglm: { enabled: true },
+    cliim: { enabled: false },
     kurobbs: { enabled: false, token: '' },
     bilibili: { enabled: false, csrfToken: '', sessdata: '', bucket: 'openplatform' },
   },
@@ -55,6 +56,7 @@ export function loadConfig() {
     providers: {
       cnb: { ...DEFAULT_CONFIG.providers.cnb, ...(providers.cnb || {}) },
       picgo: { ...DEFAULT_CONFIG.providers.picgo, ...(providers.picgo || {}) },
+      chatglm: { ...DEFAULT_CONFIG.providers.chatglm, ...(providers.chatglm || {}) },
       cliim: { ...DEFAULT_CONFIG.providers.cliim, ...(providers.cliim || {}) },
       kurobbs: { ...DEFAULT_CONFIG.providers.kurobbs, ...(providers.kurobbs || {}) },
       bilibili: { ...DEFAULT_CONFIG.providers.bilibili, ...(providers.bilibili || {}) },

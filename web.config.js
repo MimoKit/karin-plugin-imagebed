@@ -52,7 +52,10 @@ export default defineConfig({
       { componentType: 'input', key: 'cnb_token', label: 'CNB Token', description: 'CNB 个人访问令牌，需 repo-manage 读写权限', value: settings.cnb?.token || '', type: 'password' },
       { componentType: 'input', key: 'cnb_repo', label: 'CNB 仓库', description: '格式：用户名/仓库名', value: settings.cnb?.repo || '', placeholder: 'user/repo' },
 
-      { componentType: 'divider', key: 'divider_picgo', label: 'PicGo' },
+      { componentType: 'divider', key: 'divider_chatglm', label: 'ChatGLM' },
+      { componentType: 'switch', key: 'chatglm_enabled', label: '启用 ChatGLM', description: '免费图床，无需凭据（临时链接）', defaultSelected: settings.chatglm?.enabled !== false },
+
+      { componentType: 'divider', key: 'divider_picgo', label: 'PicGo'},
       { componentType: 'switch', key: 'picgo_enabled', label: '启用 PicGo', defaultSelected: settings.picgo?.enabled === true },
       { componentType: 'input', key: 'picgo_apiKey', label: 'PicGo API 密钥', description: 'picgo.net 个人中心「设置 → API」获取', value: settings.picgo?.apiKey || '', type: 'password' },
 
